@@ -61,3 +61,13 @@ def test_validity_function_returns_booleans():
 def test_non_finite_sides_are_invalid():
     assert classify_triangle(math.inf, 5, 6) == "Invalid"
     assert classify_triangle(math.nan, 5, 6) == "Invalid"
+
+
+# Test that a triangle with sides 4, 0, and 5 is invalid
+def test_zero_middle_side():
+    assert classify_triangle(4, 0, 5) == "Invalid"
+
+
+# Test a right isosceles triangle with a non-integer hypotenuse
+def test_right_isosceles_float_copilot():
+    assert classify_triangle(5, 5, 5 * math.sqrt(2)) == "Right Isosceles"

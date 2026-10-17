@@ -72,6 +72,10 @@ An equilateral triangle has three angles of 60 degrees. A right triangle must ha
 | `test_right_isosceles_triangle_with_noninteger_side` | No (ChatGPT draft) | Kept after review | A strict comparison of the squared lengths fails for `5*sqrt(2)`; the implementation uses `math.isclose` with tolerance. |
 | `test_right_scalene_triangle` | No (ChatGPT draft) | Kept after review | `(3,4,5)` must return `Right Scalene`. |
 
+
+Test	Copilot-suggested?	Decision	Why
+test_zero_middle_side	Yes	Kept	Verified that zero-length sides must return "Invalid".
+
 **Before submission:** Add truthful Copilot-reviewed entries here (one catching a specific mistake in a genuine Copilot suggestion). If Copilot's suggestions contain no errors, do not invent one; document a specific check and tell the instructor what happened.
 
 ## Customer Acceptance Criteria
